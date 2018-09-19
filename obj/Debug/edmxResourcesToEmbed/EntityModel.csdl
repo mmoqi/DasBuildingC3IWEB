@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="yida20171209NewEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DasBuilding_tenant" EntityType="EntityModel.DasBuilding_tenant" />
+    <EntitySet Name="DasBuilding_Com_EmpCard" EntityType="EntityModel.DasBuilding_Com_EmpCard" />
+    <EntitySet Name="DasBuilding_Com_CardInfo" EntityType="EntityModel.DasBuilding_Com_CardInfo" />
+    <FunctionImport Name="DasBuilding_up_AutoMngCardID">
+      <Parameter Name="count" Mode="In" Type="Int32" />
+      <Parameter Name="CardSegID" Mode="In" Type="Int32" />
+      <Parameter Name="cardtypeid" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="DasBuilding_tenant">
+    <Key>
+      <PropertyRef Name="t_id" />
+    </Key>
+    <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="t_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="t_floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="t_server_ip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="t_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="t_create_time" Type="DateTime" Precision="3" />
+    <Property Name="t_modify_time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DasBuilding_Com_EmpCard">
+    <Key>
+      <PropertyRef Name="CardID" />
+    </Key>
+    <Property Name="EmpID" Type="Int32" Nullable="false" />
+    <Property Name="CardID" Type="Int32" Nullable="false" />
+    <Property Name="CardDispNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CardSegID" Type="Int32" Nullable="false" />
+    <Property Name="CardStatusID" Type="Byte" Nullable="false" />
+    <Property Name="CardStatusChgDay" Type="DateTime" Precision="3" />
+    <Property Name="ActForegift" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="DisForegift" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="RtnForegift" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Remark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CardDueDay" Type="DateTime" Precision="3" />
+    <Property Name="CardPWD" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="CanReleaseLose" Type="Boolean" />
+    <Property Name="actcost" Type="Decimal" Precision="10" Scale="4" />
+  </EntityType>
+  <EntityType Name="DasBuilding_Com_CardInfo">
+    <Key>
+      <PropertyRef Name="CardID" />
+    </Key>
+    <Property Name="CardID" Type="Int32" Nullable="false" />
+    <Property Name="CardDispNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CardFixNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CardTypeID" Type="Int32" />
+    <Property Name="CardStatus" Type="Byte" />
+    <Property Name="CardIsUse" Type="Byte" />
+    <Property Name="CardCrtdBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CardCrtdDay" Type="DateTime" Precision="3" />
+    <Property Name="CardModiBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CardModiDay" Type="DateTime" Precision="3" />
+    <Property Name="IsUseSec0" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec1" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec2" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec3" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec4" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec5" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec6" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec7" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec8" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec9" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec10" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec11" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec12" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec13" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec14" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsUseSec15" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MnySec0" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec1" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec3" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec4" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec5" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec6" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec7" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec8" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec9" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec10" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec11" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec12" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec13" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec14" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MnySec15" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TimesSec0" Type="Int32" />
+    <Property Name="TimesSec1" Type="Int32" />
+    <Property Name="TimesSec2" Type="Int32" />
+    <Property Name="TimesSec3" Type="Int32" />
+    <Property Name="TimesSec4" Type="Int32" />
+    <Property Name="TimesSec5" Type="Int32" />
+    <Property Name="TimesSec6" Type="Int32" />
+    <Property Name="TimesSec7" Type="Int32" />
+    <Property Name="TimesSec8" Type="Int32" />
+    <Property Name="TimesSec9" Type="Int32" />
+    <Property Name="TimesSec10" Type="Int32" />
+    <Property Name="TimesSec11" Type="Int32" />
+    <Property Name="TimesSec12" Type="Int32" />
+    <Property Name="TimesSec13" Type="Int32" />
+    <Property Name="TimesSec14" Type="Int32" />
+    <Property Name="TimesSec15" Type="Int32" />
+    <Property Name="CardSegID" Type="Int32" />
+  </EntityType>
+</Schema>

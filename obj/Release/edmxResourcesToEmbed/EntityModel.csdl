@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="yida20171209NewEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DasBuilding_Visitor" EntityType="EntityModel.DasBuilding_Visitor" />
+  </EntityContainer>
+  <EntityType Name="DasBuilding_Visitor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VistName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VisitTime" Type="DateTime" Precision="3" />
+    <Property Name="VisitHours" Type="Int32" />
+    <Property Name="VistTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VistFloor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VistCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VsitedTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VsitedName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VsitedCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CarNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="faceImg" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="QrCodeImg" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="isComing" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isAuthen" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isComfirmed" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="faceImgUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

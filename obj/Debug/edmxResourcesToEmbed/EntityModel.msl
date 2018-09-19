@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityModelStoreContainer" CdmEntityContainer="yida20171209NewEntities">
+    <EntitySetMapping Name="DasBuilding_tenant">
+      <EntityTypeMapping TypeName="EntityModel.DasBuilding_tenant">
+        <MappingFragment StoreEntitySet="DasBuilding_tenant">
+          <ScalarProperty Name="t_modify_time" ColumnName="t_modify_time" />
+          <ScalarProperty Name="t_create_time" ColumnName="t_create_time" />
+          <ScalarProperty Name="t_status" ColumnName="t_status" />
+          <ScalarProperty Name="t_server_ip" ColumnName="t_server_ip" />
+          <ScalarProperty Name="t_floor" ColumnName="t_floor" />
+          <ScalarProperty Name="t_name" ColumnName="t_name" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DasBuilding_Com_EmpCard">
+      <EntityTypeMapping TypeName="EntityModel.DasBuilding_Com_EmpCard">
+        <MappingFragment StoreEntitySet="DasBuilding_Com_EmpCard">
+          <ScalarProperty Name="actcost" ColumnName="actcost" />
+          <ScalarProperty Name="CanReleaseLose" ColumnName="CanReleaseLose" />
+          <ScalarProperty Name="CardPWD" ColumnName="CardPWD" />
+          <ScalarProperty Name="CardDueDay" ColumnName="CardDueDay" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="RtnForegift" ColumnName="RtnForegift" />
+          <ScalarProperty Name="DisForegift" ColumnName="DisForegift" />
+          <ScalarProperty Name="ActForegift" ColumnName="ActForegift" />
+          <ScalarProperty Name="CardStatusChgDay" ColumnName="CardStatusChgDay" />
+          <ScalarProperty Name="CardStatusID" ColumnName="CardStatusID" />
+          <ScalarProperty Name="CardSegID" ColumnName="CardSegID" />
+          <ScalarProperty Name="CardDispNo" ColumnName="CardDispNo" />
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DasBuilding_Com_CardInfo">
+      <EntityTypeMapping TypeName="EntityModel.DasBuilding_Com_CardInfo">
+        <MappingFragment StoreEntitySet="DasBuilding_Com_CardInfo">
+          <ScalarProperty Name="CardSegID" ColumnName="CardSegID" />
+          <ScalarProperty Name="TimesSec15" ColumnName="TimesSec15" />
+          <ScalarProperty Name="TimesSec14" ColumnName="TimesSec14" />
+          <ScalarProperty Name="TimesSec13" ColumnName="TimesSec13" />
+          <ScalarProperty Name="TimesSec12" ColumnName="TimesSec12" />
+          <ScalarProperty Name="TimesSec11" ColumnName="TimesSec11" />
+          <ScalarProperty Name="TimesSec10" ColumnName="TimesSec10" />
+          <ScalarProperty Name="TimesSec9" ColumnName="TimesSec9" />
+          <ScalarProperty Name="TimesSec8" ColumnName="TimesSec8" />
+          <ScalarProperty Name="TimesSec7" ColumnName="TimesSec7" />
+          <ScalarProperty Name="TimesSec6" ColumnName="TimesSec6" />
+          <ScalarProperty Name="TimesSec5" ColumnName="TimesSec5" />
+          <ScalarProperty Name="TimesSec4" ColumnName="TimesSec4" />
+          <ScalarProperty Name="TimesSec3" ColumnName="TimesSec3" />
+          <ScalarProperty Name="TimesSec2" ColumnName="TimesSec2" />
+          <ScalarProperty Name="TimesSec1" ColumnName="TimesSec1" />
+          <ScalarProperty Name="TimesSec0" ColumnName="TimesSec0" />
+          <ScalarProperty Name="MnySec15" ColumnName="MnySec15" />
+          <ScalarProperty Name="MnySec14" ColumnName="MnySec14" />
+          <ScalarProperty Name="MnySec13" ColumnName="MnySec13" />
+          <ScalarProperty Name="MnySec12" ColumnName="MnySec12" />
+          <ScalarProperty Name="MnySec11" ColumnName="MnySec11" />
+          <ScalarProperty Name="MnySec10" ColumnName="MnySec10" />
+          <ScalarProperty Name="MnySec9" ColumnName="MnySec9" />
+          <ScalarProperty Name="MnySec8" ColumnName="MnySec8" />
+          <ScalarProperty Name="MnySec7" ColumnName="MnySec7" />
+          <ScalarProperty Name="MnySec6" ColumnName="MnySec6" />
+          <ScalarProperty Name="MnySec5" ColumnName="MnySec5" />
+          <ScalarProperty Name="MnySec4" ColumnName="MnySec4" />
+          <ScalarProperty Name="MnySec3" ColumnName="MnySec3" />
+          <ScalarProperty Name="MnySec2" ColumnName="MnySec2" />
+          <ScalarProperty Name="MnySec1" ColumnName="MnySec1" />
+          <ScalarProperty Name="MnySec0" ColumnName="MnySec0" />
+          <ScalarProperty Name="IsUseSec15" ColumnName="IsUseSec15" />
+          <ScalarProperty Name="IsUseSec14" ColumnName="IsUseSec14" />
+          <ScalarProperty Name="IsUseSec13" ColumnName="IsUseSec13" />
+          <ScalarProperty Name="IsUseSec12" ColumnName="IsUseSec12" />
+          <ScalarProperty Name="IsUseSec11" ColumnName="IsUseSec11" />
+          <ScalarProperty Name="IsUseSec10" ColumnName="IsUseSec10" />
+          <ScalarProperty Name="IsUseSec9" ColumnName="IsUseSec9" />
+          <ScalarProperty Name="IsUseSec8" ColumnName="IsUseSec8" />
+          <ScalarProperty Name="IsUseSec7" ColumnName="IsUseSec7" />
+          <ScalarProperty Name="IsUseSec6" ColumnName="IsUseSec6" />
+          <ScalarProperty Name="IsUseSec5" ColumnName="IsUseSec5" />
+          <ScalarProperty Name="IsUseSec4" ColumnName="IsUseSec4" />
+          <ScalarProperty Name="IsUseSec3" ColumnName="IsUseSec3" />
+          <ScalarProperty Name="IsUseSec2" ColumnName="IsUseSec2" />
+          <ScalarProperty Name="IsUseSec1" ColumnName="IsUseSec1" />
+          <ScalarProperty Name="IsUseSec0" ColumnName="IsUseSec0" />
+          <ScalarProperty Name="CardModiDay" ColumnName="CardModiDay" />
+          <ScalarProperty Name="CardModiBy" ColumnName="CardModiBy" />
+          <ScalarProperty Name="CardCrtdDay" ColumnName="CardCrtdDay" />
+          <ScalarProperty Name="CardCrtdBy" ColumnName="CardCrtdBy" />
+          <ScalarProperty Name="CardIsUse" ColumnName="CardIsUse" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
+          <ScalarProperty Name="CardFixNo" ColumnName="CardFixNo" />
+          <ScalarProperty Name="CardDispNo" ColumnName="CardDispNo" />
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DasBuilding_up_AutoMngCardID" FunctionName="EntityModel.Store.DasBuilding_up_AutoMngCardID" />
+  </EntityContainerMapping>
+</Mapping>

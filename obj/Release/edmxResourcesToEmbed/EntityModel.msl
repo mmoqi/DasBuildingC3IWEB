@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityModelStoreContainer" CdmEntityContainer="yida20171209NewEntities">
+    <EntitySetMapping Name="DasBuilding_Visitor">
+      <EntityTypeMapping TypeName="EntityModel.DasBuilding_Visitor">
+        <MappingFragment StoreEntitySet="DasBuilding_Visitor">
+          <ScalarProperty Name="faceImgUrl" ColumnName="faceImgUrl" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="isComfirmed" ColumnName="isComfirmed" />
+          <ScalarProperty Name="isAuthen" ColumnName="isAuthen" />
+          <ScalarProperty Name="isComing" ColumnName="isComing" />
+          <ScalarProperty Name="QrCodeImg" ColumnName="QrCodeImg" />
+          <ScalarProperty Name="faceImg" ColumnName="faceImg" />
+          <ScalarProperty Name="CarNo" ColumnName="CarNo" />
+          <ScalarProperty Name="VsitedCompany" ColumnName="VsitedCompany" />
+          <ScalarProperty Name="VsitedName" ColumnName="VsitedName" />
+          <ScalarProperty Name="VsitedTel" ColumnName="VsitedTel" />
+          <ScalarProperty Name="VistCompany" ColumnName="VistCompany" />
+          <ScalarProperty Name="VistFloor" ColumnName="VistFloor" />
+          <ScalarProperty Name="VistTel" ColumnName="VistTel" />
+          <ScalarProperty Name="VisitHours" ColumnName="VisitHours" />
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="VistName" ColumnName="VistName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DasBuilding_Com_CardInfo">
+          <Key>
+            <PropertyRef Name="CardID" />
+          </Key>
+          <Property Name="CardID" Type="int" Nullable="false" />
+          <Property Name="CardDispNo" Type="varchar" MaxLength="20" />
+          <Property Name="CardFixNo" Type="varchar" MaxLength="20" />
+          <Property Name="CardTypeID" Type="int" />
+          <Property Name="CardStatus" Type="tinyint" />
+          <Property Name="CardIsUse" Type="tinyint" />
+          <Property Name="CardCrtdBy" Type="varchar" MaxLength="20" />
+          <Property Name="CardCrtdDay" Type="datetime" />
+          <Property Name="CardModiBy" Type="varchar" MaxLength="20" />
+          <Property Name="CardModiDay" Type="datetime" />
+          <Property Name="IsUseSec0" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec1" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec2" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec3" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec4" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec5" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec6" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec7" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec8" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec9" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec10" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec11" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec12" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec13" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec14" Type="char" MaxLength="2" />
+          <Property Name="IsUseSec15" Type="char" MaxLength="2" />
+          <Property Name="MnySec0" Type="money" />
+          <Property Name="MnySec1" Type="money" />
+          <Property Name="MnySec2" Type="money" />
+          <Property Name="MnySec3" Type="money" />
+          <Property Name="MnySec4" Type="money" />
+          <Property Name="MnySec5" Type="money" />
+          <Property Name="MnySec6" Type="money" />
+          <Property Name="MnySec7" Type="money" />
+          <Property Name="MnySec8" Type="money" />
+          <Property Name="MnySec9" Type="money" />
+          <Property Name="MnySec10" Type="money" />
+          <Property Name="MnySec11" Type="money" />
+          <Property Name="MnySec12" Type="money" />
+          <Property Name="MnySec13" Type="money" />
+          <Property Name="MnySec14" Type="money" />
+          <Property Name="MnySec15" Type="money" />
+          <Property Name="TimesSec0" Type="int" />
+          <Property Name="TimesSec1" Type="int" />
+          <Property Name="TimesSec2" Type="int" />
+          <Property Name="TimesSec3" Type="int" />
+          <Property Name="TimesSec4" Type="int" />
+          <Property Name="TimesSec5" Type="int" />
+          <Property Name="TimesSec6" Type="int" />
+          <Property Name="TimesSec7" Type="int" />
+          <Property Name="TimesSec8" Type="int" />
+          <Property Name="TimesSec9" Type="int" />
+          <Property Name="TimesSec10" Type="int" />
+          <Property Name="TimesSec11" Type="int" />
+          <Property Name="TimesSec12" Type="int" />
+          <Property Name="TimesSec13" Type="int" />
+          <Property Name="TimesSec14" Type="int" />
+          <Property Name="TimesSec15" Type="int" />
+          <Property Name="CardSegID" Type="int" />
+        </EntityType>
+        <EntityType Name="DasBuilding_Com_EmpCard">
+          <Key>
+            <PropertyRef Name="CardID" />
+          </Key>
+          <Property Name="EmpID" Type="int" Nullable="false" />
+          <Property Name="CardID" Type="int" Nullable="false" />
+          <Property Name="CardDispNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CardSegID" Type="int" Nullable="false" />
+          <Property Name="CardStatusID" Type="tinyint" Nullable="false" />
+          <Property Name="CardStatusChgDay" Type="datetime" />
+          <Property Name="ActForegift" Type="smallmoney" />
+          <Property Name="DisForegift" Type="smallmoney" />
+          <Property Name="RtnForegift" Type="smallmoney" />
+          <Property Name="Remark" Type="varchar" MaxLength="30" />
+          <Property Name="CardDueDay" Type="datetime" />
+          <Property Name="CardPWD" Type="varchar" MaxLength="60" />
+          <Property Name="CanReleaseLose" Type="bit" />
+          <Property Name="actcost" Type="smallmoney" />
+        </EntityType>
+        <EntityType Name="DasBuilding_tenant">
+          <Key>
+            <PropertyRef Name="t_id" />
+          </Key>
+          <Property Name="t_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="t_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="t_floor" Type="nvarchar" MaxLength="50" />
+          <Property Name="t_server_ip" Type="nvarchar" MaxLength="50" />
+          <Property Name="t_status" Type="nvarchar" MaxLength="50" />
+          <Property Name="t_create_time" Type="datetime" />
+          <Property Name="t_modify_time" Type="datetime" />
+        </EntityType>
+        <Function Name="DasBuilding_up_AutoMngCardID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="count" Type="int" Mode="In" />
+          <Parameter Name="CardSegID" Type="int" Mode="In" />
+          <Parameter Name="cardtypeid" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="EntityModelStoreContainer">
+          <EntitySet Name="DasBuilding_Com_CardInfo" EntityType="Self.DasBuilding_Com_CardInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DasBuilding_Com_EmpCard" EntityType="Self.DasBuilding_Com_EmpCard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DasBuilding_tenant" EntityType="Self.DasBuilding_tenant" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="yida20171209NewEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DasBuilding_tenant" EntityType="EntityModel.DasBuilding_tenant" />
+          <EntitySet Name="DasBuilding_Com_EmpCard" EntityType="EntityModel.DasBuilding_Com_EmpCard" />
+          <EntitySet Name="DasBuilding_Com_CardInfo" EntityType="EntityModel.DasBuilding_Com_CardInfo" />
+          <FunctionImport Name="DasBuilding_up_AutoMngCardID">
+            <Parameter Name="count" Mode="In" Type="Int32" />
+            <Parameter Name="CardSegID" Mode="In" Type="Int32" />
+            <Parameter Name="cardtypeid" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="DasBuilding_tenant">
+          <Key>
+            <PropertyRef Name="t_id" />
+          </Key>
+          <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="t_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="t_floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="t_server_ip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="t_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="t_create_time" Type="DateTime" Precision="3" />
+          <Property Name="t_modify_time" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DasBuilding_Com_EmpCard">
+          <Key>
+            <PropertyRef Name="CardID" />
+          </Key>
+          <Property Name="EmpID" Type="Int32" Nullable="false" />
+          <Property Name="CardID" Type="Int32" Nullable="false" />
+          <Property Name="CardDispNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CardSegID" Type="Int32" Nullable="false" />
+          <Property Name="CardStatusID" Type="Byte" Nullable="false" />
+          <Property Name="CardStatusChgDay" Type="DateTime" Precision="3" />
+          <Property Name="ActForegift" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="DisForegift" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="RtnForegift" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Remark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CardDueDay" Type="DateTime" Precision="3" />
+          <Property Name="CardPWD" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CanReleaseLose" Type="Boolean" />
+          <Property Name="actcost" Type="Decimal" Precision="10" Scale="4" />
+        </EntityType>
+        <EntityType Name="DasBuilding_Com_CardInfo">
+          <Key>
+            <PropertyRef Name="CardID" />
+          </Key>
+          <Property Name="CardID" Type="Int32" Nullable="false" />
+          <Property Name="CardDispNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CardFixNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CardTypeID" Type="Int32" />
+          <Property Name="CardStatus" Type="Byte" />
+          <Property Name="CardIsUse" Type="Byte" />
+          <Property Name="CardCrtdBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CardCrtdDay" Type="DateTime" Precision="3" />
+          <Property Name="CardModiBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CardModiDay" Type="DateTime" Precision="3" />
+          <Property Name="IsUseSec0" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec1" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec2" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec3" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec4" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec5" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec6" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec7" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec8" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec9" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec10" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec11" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec12" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec13" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec14" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="IsUseSec15" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MnySec0" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec1" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec2" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec3" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec4" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec5" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec6" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec7" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec8" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec9" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec10" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec11" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec12" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec13" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec14" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MnySec15" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TimesSec0" Type="Int32" />
+          <Property Name="TimesSec1" Type="Int32" />
+          <Property Name="TimesSec2" Type="Int32" />
+          <Property Name="TimesSec3" Type="Int32" />
+          <Property Name="TimesSec4" Type="Int32" />
+          <Property Name="TimesSec5" Type="Int32" />
+          <Property Name="TimesSec6" Type="Int32" />
+          <Property Name="TimesSec7" Type="Int32" />
+          <Property Name="TimesSec8" Type="Int32" />
+          <Property Name="TimesSec9" Type="Int32" />
+          <Property Name="TimesSec10" Type="Int32" />
+          <Property Name="TimesSec11" Type="Int32" />
+          <Property Name="TimesSec12" Type="Int32" />
+          <Property Name="TimesSec13" Type="Int32" />
+          <Property Name="TimesSec14" Type="Int32" />
+          <Property Name="TimesSec15" Type="Int32" />
+          <Property Name="CardSegID" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EntityModelStoreContainer" CdmEntityContainer="yida20171209NewEntities">
+          <EntitySetMapping Name="DasBuilding_tenant">
+            <EntityTypeMapping TypeName="EntityModel.DasBuilding_tenant">
+              <MappingFragment StoreEntitySet="DasBuilding_tenant">
+                <ScalarProperty Name="t_modify_time" ColumnName="t_modify_time" />
+                <ScalarProperty Name="t_create_time" ColumnName="t_create_time" />
+                <ScalarProperty Name="t_status" ColumnName="t_status" />
+                <ScalarProperty Name="t_server_ip" ColumnName="t_server_ip" />
+                <ScalarProperty Name="t_floor" ColumnName="t_floor" />
+                <ScalarProperty Name="t_name" ColumnName="t_name" />
+                <ScalarProperty Name="t_id" ColumnName="t_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DasBuilding_Com_EmpCard">
+            <EntityTypeMapping TypeName="EntityModel.DasBuilding_Com_EmpCard">
+              <MappingFragment StoreEntitySet="DasBuilding_Com_EmpCard">
+                <ScalarProperty Name="actcost" ColumnName="actcost" />
+                <ScalarProperty Name="CanReleaseLose" ColumnName="CanReleaseLose" />
+                <ScalarProperty Name="CardPWD" ColumnName="CardPWD" />
+                <ScalarProperty Name="CardDueDay" ColumnName="CardDueDay" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="RtnForegift" ColumnName="RtnForegift" />
+                <ScalarProperty Name="DisForegift" ColumnName="DisForegift" />
+                <ScalarProperty Name="ActForegift" ColumnName="ActForegift" />
+                <ScalarProperty Name="CardStatusChgDay" ColumnName="CardStatusChgDay" />
+                <ScalarProperty Name="CardStatusID" ColumnName="CardStatusID" />
+                <ScalarProperty Name="CardSegID" ColumnName="CardSegID" />
+                <ScalarProperty Name="CardDispNo" ColumnName="CardDispNo" />
+                <ScalarProperty Name="CardID" ColumnName="CardID" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DasBuilding_Com_CardInfo">
+            <EntityTypeMapping TypeName="EntityModel.DasBuilding_Com_CardInfo">
+              <MappingFragment StoreEntitySet="DasBuilding_Com_CardInfo">
+                <ScalarProperty Name="CardSegID" ColumnName="CardSegID" />
+                <ScalarProperty Name="TimesSec15" ColumnName="TimesSec15" />
+                <ScalarProperty Name="TimesSec14" ColumnName="TimesSec14" />
+                <ScalarProperty Name="TimesSec13" ColumnName="TimesSec13" />
+                <ScalarProperty Name="TimesSec12" ColumnName="TimesSec12" />
+                <ScalarProperty Name="TimesSec11" ColumnName="TimesSec11" />
+                <ScalarProperty Name="TimesSec10" ColumnName="TimesSec10" />
+                <ScalarProperty Name="TimesSec9" ColumnName="TimesSec9" />
+                <ScalarProperty Name="TimesSec8" ColumnName="TimesSec8" />
+                <ScalarProperty Name="TimesSec7" ColumnName="TimesSec7" />
+                <ScalarProperty Name="TimesSec6" ColumnName="TimesSec6" />
+                <ScalarProperty Name="TimesSec5" ColumnName="TimesSec5" />
+                <ScalarProperty Name="TimesSec4" ColumnName="TimesSec4" />
+                <ScalarProperty Name="TimesSec3" ColumnName="TimesSec3" />
+                <ScalarProperty Name="TimesSec2" ColumnName="TimesSec2" />
+                <ScalarProperty Name="TimesSec1" ColumnName="TimesSec1" />
+                <ScalarProperty Name="TimesSec0" ColumnName="TimesSec0" />
+                <ScalarProperty Name="MnySec15" ColumnName="MnySec15" />
+                <ScalarProperty Name="MnySec14" ColumnName="MnySec14" />
+                <ScalarProperty Name="MnySec13" ColumnName="MnySec13" />
+                <ScalarProperty Name="MnySec12" ColumnName="MnySec12" />
+                <ScalarProperty Name="MnySec11" ColumnName="MnySec11" />
+                <ScalarProperty Name="MnySec10" ColumnName="MnySec10" />
+                <ScalarProperty Name="MnySec9" ColumnName="MnySec9" />
+                <ScalarProperty Name="MnySec8" ColumnName="MnySec8" />
+                <ScalarProperty Name="MnySec7" ColumnName="MnySec7" />
+                <ScalarProperty Name="MnySec6" ColumnName="MnySec6" />
+                <ScalarProperty Name="MnySec5" ColumnName="MnySec5" />
+                <ScalarProperty Name="MnySec4" ColumnName="MnySec4" />
+                <ScalarProperty Name="MnySec3" ColumnName="MnySec3" />
+                <ScalarProperty Name="MnySec2" ColumnName="MnySec2" />
+                <ScalarProperty Name="MnySec1" ColumnName="MnySec1" />
+                <ScalarProperty Name="MnySec0" ColumnName="MnySec0" />
+                <ScalarProperty Name="IsUseSec15" ColumnName="IsUseSec15" />
+                <ScalarProperty Name="IsUseSec14" ColumnName="IsUseSec14" />
+                <ScalarProperty Name="IsUseSec13" ColumnName="IsUseSec13" />
+                <ScalarProperty Name="IsUseSec12" ColumnName="IsUseSec12" />
+                <ScalarProperty Name="IsUseSec11" ColumnName="IsUseSec11" />
+                <ScalarProperty Name="IsUseSec10" ColumnName="IsUseSec10" />
+                <ScalarProperty Name="IsUseSec9" ColumnName="IsUseSec9" />
+                <ScalarProperty Name="IsUseSec8" ColumnName="IsUseSec8" />
+                <ScalarProperty Name="IsUseSec7" ColumnName="IsUseSec7" />
+                <ScalarProperty Name="IsUseSec6" ColumnName="IsUseSec6" />
+                <ScalarProperty Name="IsUseSec5" ColumnName="IsUseSec5" />
+                <ScalarProperty Name="IsUseSec4" ColumnName="IsUseSec4" />
+                <ScalarProperty Name="IsUseSec3" ColumnName="IsUseSec3" />
+                <ScalarProperty Name="IsUseSec2" ColumnName="IsUseSec2" />
+                <ScalarProperty Name="IsUseSec1" ColumnName="IsUseSec1" />
+                <ScalarProperty Name="IsUseSec0" ColumnName="IsUseSec0" />
+                <ScalarProperty Name="CardModiDay" ColumnName="CardModiDay" />
+                <ScalarProperty Name="CardModiBy" ColumnName="CardModiBy" />
+                <ScalarProperty Name="CardCrtdDay" ColumnName="CardCrtdDay" />
+                <ScalarProperty Name="CardCrtdBy" ColumnName="CardCrtdBy" />
+                <ScalarProperty Name="CardIsUse" ColumnName="CardIsUse" />
+                <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+                <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
+                <ScalarProperty Name="CardFixNo" ColumnName="CardFixNo" />
+                <ScalarProperty Name="CardDispNo" ColumnName="CardDispNo" />
+                <ScalarProperty Name="CardID" ColumnName="CardID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DasBuilding_up_AutoMngCardID" FunctionName="EntityModel.Store.DasBuilding_up_AutoMngCardID" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

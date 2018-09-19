@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DasBuilding_Visitor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VistName" Type="nvarchar" MaxLength="50" />
+    <Property Name="VisitTime" Type="datetime" />
+    <Property Name="VisitHours" Type="int" />
+    <Property Name="VistTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="VistFloor" Type="nvarchar" MaxLength="50" />
+    <Property Name="VistCompany" Type="nvarchar" MaxLength="50" />
+    <Property Name="VsitedTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="VsitedName" Type="nvarchar" MaxLength="50" />
+    <Property Name="VsitedCompany" Type="nvarchar" MaxLength="50" />
+    <Property Name="CarNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="faceImg" Type="image" />
+    <Property Name="QrCodeImg" Type="image" />
+    <Property Name="isComing" Type="char" MaxLength="1" />
+    <Property Name="isAuthen" Type="char" MaxLength="1" />
+    <Property Name="isComfirmed" Type="char" MaxLength="1" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="faceImgUrl" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="EntityModelStoreContainer">
+    <EntitySet Name="DasBuilding_Visitor" EntityType="Self.DasBuilding_Visitor" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
